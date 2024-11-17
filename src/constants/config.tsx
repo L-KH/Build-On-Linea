@@ -10,17 +10,20 @@ type Config = {
 };
 
 export const addresses: Config = {
-    "5": {
+    "59144": {
         "nft": {
-            "address": "0xcaa8aa6733cff9a916b931e34b2cb817193bfb19"
-        }
-    },
-    "11155111": { // Linea Mainnet
-        "nft": {
-            "address": "0x3cbd07b8bc7414b7550a434d901f7e92c63647b2"
+            "address": "0x5ad2a373d7e261e1570021548de454ccf7eecd6c"
         },
         "lineaCompetition": {
-            "address": "0x3cbd07b8bc7414b7550a434d901f7e92c63647b2" // Replace with your deployed contract address
+            "address": "0x5ad2a373d7e261e1570021548de454ccf7eecd6c" // Replace with your deployed contract address
+        }
+    },
+    "59141": { // Linea Mainnet
+        "nft": {
+            "address": "0x8d98aef8cfd8f1808421437528a0ed6c90608861"
+        },
+        "lineaCompetition": {
+            "address": "0x8d98aef8cfd8f1808421437528a0ed6c90608861" // Replace with your deployed contract address
         }
     }
 }

@@ -4,11 +4,17 @@ import styles from "@/styles/mainPane.module.css";
 import { SubmissionModal } from "./components/SubmissionModal";
 import { SubmissionsList } from "./components/SubmissionsList";
 import { motion } from "framer-motion"; // Add framer-motion for animations
+import { NetworkCheck } from '@/components/NetworkCheck';
+
+
+
+
 const MainPane: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Box p={6} className={styles.mainContainer}>
+      <NetworkCheck>
       <VStack spacing={8} align="center"> {/* Changed to center alignment */}
         {/* Competition Introduction */}
         <motion.div
@@ -42,6 +48,15 @@ const MainPane: FC = () => {
                 <Text>
                   ⭐ <strong>Life on Linea</strong>: Show how you're using Linea in 
                   your daily crypto activities.
+                </Text>
+                <Text 
+                  fontSize="md" 
+                  color="blue.500" 
+                  cursor="pointer" 
+                  _hover={{ textDecoration: 'underline' }}
+                  onClick={() => window.open('https://linea.mirror.xyz/S1kX0o2i3J-fX0pEsu5S2gD4Hkwj3Be5JwjXvExaydo', '_blank')}
+                >
+                  📚 Click here to learn more about the competition details
                 </Text>
               </VStack>
 
@@ -78,7 +93,7 @@ const MainPane: FC = () => {
           <SubmissionsList />
         </Box>
       </VStack>
-
+      </NetworkCheck>
       {/* Submission Modal */}
       <SubmissionModal isOpen={isOpen} onClose={onClose} />
     </Box>

@@ -18,7 +18,9 @@ import {
   scrollTestnet,
   fantomSonicTestnet,
   lineaTestnet,
-} from "wagmi/chains";
+  linea,
+  
+} from "@wagmi/core/chains";
 
 import berachain_logo from "../public/img/berachain_logo.png"
 import lineaTesnet_logo from "../public/img/lineaTesnet_logo.png";
@@ -331,6 +333,7 @@ const transports: Record<number, Transport> = {
   [custommint.id]: http(), 
   [customzircuit.id]: http(), 
   [customredstone.id]: http(), 
+  [linea.id]: http(), 
 
 };
 export const wagmiConfig = createConfig({
@@ -341,11 +344,12 @@ export const wagmiConfig = createConfig({
   // //customTaiko,
   // customplume,
   //customTaiko2,
-  sepolia,
+  //sepolia,
   //customScroll,
   //fantomSonicTestnet,
   //customMetis,
-  // customLineaTestnet,
+  //customLineaTestnet,
+  linea,
   // // baseGoerli,
   // // bscTestnet,
   // customberachain, // Add the custom Berachain Testnet to the wagmi configuration
